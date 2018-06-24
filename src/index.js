@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -13,10 +13,10 @@ import registerServiceWorker from './registerServiceWorker';
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
-<BrowserRouter>
-   <Provider store={store}>
-             <App /> 
-    </Provider>
-</BrowserRouter>, 
-document.getElementById('root'));
+    <BrowserRouter>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </BrowserRouter>,
+    document.getElementById('root'));
 registerServiceWorker();
